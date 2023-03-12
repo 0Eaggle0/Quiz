@@ -7,10 +7,10 @@
 
     <TextView
         android:id="@+id/tite_label"
-        android:layout_width="55dp"
-        android:layout_height="15dp"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
         android:layout_marginTop="100dp"
-        android:text="Wellcome"
+        android:text="@string/welcome_label"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,8 +19,21 @@
         android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Button"
+        android:layout_marginTop="30dp"
+        android:text="@string/login_button_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName_textField" />
+
+    <EditText
+        android:id="@+id/userName_textField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:ems="10"
+        android:hint="@string/example_text_label"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tite_label" />

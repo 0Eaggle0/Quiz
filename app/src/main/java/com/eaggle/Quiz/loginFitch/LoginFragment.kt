@@ -10,10 +10,15 @@ import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.eaggle.Quiz.R
+import com.eaggle.Quiz.helpers.DataManager
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class LoginFragment: Fragment() {
+    @Inject
+    lateinit var data_manager: DataManager
 
-    private var username: String = ""
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,13 +37,13 @@ class LoginFragment: Fragment() {
 
         val userTextField = view.findViewById<TextView>(R.id.userName_textField)
         userTextField.doOnTextChanged { text, start, before, count ->
-            username = text.toString()
+            data_manager.userName = text.toString()
             checkButtonEnabled()
         }
     }
 
     private fun checkButtonEnabled(){
         val button = view?.findViewById<Button>(R.id.btn_login)
-        button?.isEnabled = !username.isBlank()
+        button?.isEnabled = !data_manager.userName.isBlank()
     }
 }

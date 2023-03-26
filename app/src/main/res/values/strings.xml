@@ -3,4 +3,5 @@
     <string name="welcome_label">WELCOME</string>
     <string name="login_button_label">start game</string>
     <string name="example_text_label">GRAY-text</string>
+    <string name="quiz_welcome_label">Hello %1$s</string>
 </resources>

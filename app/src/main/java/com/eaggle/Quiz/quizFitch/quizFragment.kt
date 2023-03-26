@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.eaggle.Quiz.R
 import com.eaggle.Quiz.helpers.DataManager
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+
+@AndroidEntryPoint
 
 class quizFragment: Fragment() {
     @Inject

@@ -4,4 +4,5 @@ import javax.inject.Inject
 
 class DataManager @Inject constructor(){
     var userName = ""
+    var test = testExample
 }

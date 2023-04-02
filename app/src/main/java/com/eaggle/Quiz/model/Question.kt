@@ -1,5 +1,5 @@
 package com.eaggle.Quiz.model
 
-class Question {
+class Question(val text: String) {
     val answers: MutableList<Answer> = mutableListOf()
 }

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -21,6 +22,7 @@ class quizFragment: Fragment() {
     @Inject
     lateinit var data_manager: DataManager
     private var index = 0
+    private var variantGroup: RadioGroup? = null
     private var variant1: RadioButton? = null
     private var variant2: RadioButton? = null
     private var variant3: RadioButton? = null
@@ -48,6 +50,8 @@ class quizFragment: Fragment() {
         variant3?.setOnClickListener {
             buttonAnswer?.isEnabled = true
         }
+
+        variantGroup = view.findViewById(R.id.radioGroup)
 
         val welcomeLabel = view.findViewById<TextView>(R.id.wellcome_label)
         welcomeLabel.text = getString(R.string.quiz_welcome_label, data_manager.userName)
@@ -92,9 +96,7 @@ class quizFragment: Fragment() {
         textQuestion?.text = currentQuestion.text
 
         buttonAnswer?.isEnabled = false
-        variant1?.isChecked = false
-        variant2?.isChecked = false
-        variant3?.isChecked = false
+        variantGroup?.clearCheck()
 
         variant1?.text = currentQuestion.answers[0].text
         variant2?.text = currentQuestion.answers[1].text

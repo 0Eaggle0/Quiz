@@ -5,4 +5,6 @@
     <string name="example_text_label">GRAY-text</string>
     <string name="quiz_welcome_label">Hello %1$s</string>
     <string name="next_button">Next</string>
+    <string name="result_title">Your score:</string>
+    <string name="restart_button_label">Restart</string>
 </resources>

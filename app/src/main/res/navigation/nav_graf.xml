@@ -15,5 +15,13 @@
     <fragment
         android:id="@+id/quizFragment"
         android:name="com.eaggle.Quiz.quizFitch.quizFragment"
-        android:label="quizFragment" />
+        android:label="quizFragment" >
+        <action
+            android:id="@+id/action_quizFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.eaggle.Quiz.resultFeature.ResultsFragment"
+        android:label="ResultsFragment" />
 </navigation>
